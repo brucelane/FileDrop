@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82A72ADD-433E-42DD-9F7A-9C23A5025133}</ProjectGuid>
+    <RootNamespace>FileDrop</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\Dropbox\Cinder\Cinder\include\asio;..\..\Dropbox\Cinder\Cinder\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\src;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\include\msw;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\lib;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\src;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Warping\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src;..\..\Dropbox\Cinder\Cinder\blocks\OSC\src;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\include\msw;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\Dropbox\Cinder\Cinder\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-$(PlatformToolset)_d.lib;OpenGL32.lib;%(AdditionalDependencies);..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\lib\Spout2.lib;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\lib\msw\x86\CVClient.lib;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\lib\msw\x86\QTMLClient.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>"..\..\Dropbox\Cinder\Cinder\lib\msw\$(PlatformTarget)";..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\lib\msw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;LIBCPMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\lib\Spout2.dll" "$(OutDir)"
+xcopy /y "..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\lib\SpoutPanel.exe" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\Dropbox\Cinder\Cinder\include\asio;..\..\Dropbox\Cinder\Cinder\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\src;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\include\msw;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\lib;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\src;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Warping\include;..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src;..\..\Dropbox\Cinder\Cinder\blocks\OSC\src;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\include\msw;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\Dropbox\Cinder\Cinder\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-$(PlatformToolset).lib;OpenGL32.lib;%(AdditionalDependencies);..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\lib\Spout2.lib;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\lib\msw\x86\CVClient.lib;..\..\Dropbox\Cinder\Cinder\blocks\QuickTime\lib\msw\x86\QTMLClient.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>"..\..\Dropbox\Cinder\Cinder\lib\msw\$(PlatformTarget)";..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\lib\msw</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\lib\Spout2.dll" "$(OutDir)"
+xcopy /y "..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Spout\lib\SpoutPanel.exe" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\include\CinderMidi.h" />
+    <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\src\HapSupport.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\src\MovieHap.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\include\CinderImGui.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\include\imgui_user.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\include\imgui_user.inl" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui\imconfig.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui\imgui.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\include\MidiExceptions.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\include\MidiHub.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\include\MidiOut.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\lib\RtMidi.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\AudioWrapper.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\Batchass.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\JSONWrapper.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\Logger.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\MessageRouter.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\OSCWrapper.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\ParameterBag.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\Shaders.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\SpoutWrapper.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\Textures.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\WarpWrapper.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\include\Watchdog.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Warping\include\Warp.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src\WebSocketClient.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src\WebSocketConnection.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src\WebSocketServer.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscArg.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscBundle.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscListener.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscMessage.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscSender.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\IpEndpointName.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\NetworkingUtils.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\PacketListener.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\TimerListener.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\UdpSocket.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\MessageMappingOscPacketListener.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscException.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscHostEndianness.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscOutboundPacketStream.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscPacketListener.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscPrintReceivedElements.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscReceivedElements.h" />
+    <ClInclude Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscTypes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\src\CinderMidi.cpp" />
+    <ClCompile Include="..\src\FileDropApp.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\src\MovieHap.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Hap2\src\HapSupport.c" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\src\CinderImGui.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-ImGui\lib\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\src\MidiHub.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\src\MidiOut.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-MIDI2\lib\RtMidi.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\AudioWrapper.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\Batchass.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\JSONWrapper.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\Logger.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\MessageRouter.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\OSCWrapper.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\ParameterBag.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\Shaders.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\SpoutWrapper.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\Textures.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Reymenta\src\WarpWrapper.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Warping\src\Warp.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Warping\src\WarpBilinear.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Warping\src\WarpPerspective.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-Warping\src\WarpPerspectiveBilinear.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src\WebSocketClient.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src\WebSocketConnection.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\Cinder-WebSocketPP\src\WebSocketServer.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscBundle.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscListener.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscMessage.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\OscSender.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\IpEndpointName.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscOutboundPacketStream.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscPrintReceivedElements.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscReceivedElements.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\osc\OscTypes.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\win32\NetworkingUtils.cpp" />
+    <ClCompile Include="..\..\Dropbox\Cinder\Cinder\blocks\OSC\src\ip\win32\UdpSocket.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
